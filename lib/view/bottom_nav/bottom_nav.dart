@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:mypcot_assignment/constants/const.dart';
 import 'package:mypcot_assignment/controller/bottom_nav_controller.dart';
@@ -34,47 +33,49 @@ class BottomNav extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: GetBuilder<BottomNavController>(builder: (context) {
-        return BottomAppBar(
-          elevation: 20,
-          notchMargin: 8.0,
-          shape: const CircularNotchedRectangle(),
-          child: Container(
-            height: 70,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  icon: SvgPicture.asset('assets/icons/Group 910.svg'),
-                  onPressed: () {
-                    bottomNavController.setBottomBarIndex(0);
-                  },
-                ),
-                IconButton(
-                  icon: SvgPicture.asset('assets/icons/Group 912.svg'),
-                  onPressed: () {
-                    bottomNavController.setBottomBarIndex(1);
-                  },
-                ),
-                const SizedBox.shrink(),
-                IconButton(
-                  icon: SvgPicture.asset('assets/icons/Group 913.svg'),
-                  onPressed: () {
-                    bottomNavController.setBottomBarIndex(2);
-                  },
-                ),
-                IconButton(
-                  icon: SvgPicture.asset('assets/icons/Group 914.svg'),
-                  onPressed: () {
-                    bottomNavController.setBottomBarIndex(3);
-                  },
-                ),
-              ],
+      bottomNavigationBar: GetBuilder<BottomNavController>(
+        builder: (context) {
+          return BottomAppBar(
+            elevation: 20,
+            notchMargin: 8.0,
+            shape: const CircularNotchedRectangle(),
+            child: Container(
+              height: 70,
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    icon: Image.asset('assets/images/Group 910.png'),
+                    onPressed: () {
+                      bottomNavController.setBottomBarIndex(0);
+                    },
+                  ),
+                  IconButton(
+                    icon: Image.asset('assets/images/Group 911.png'),
+                    onPressed: () {
+                      bottomNavController.setBottomBarIndex(1);
+                    },
+                  ),
+                  const SizedBox.shrink(),
+                  IconButton(
+                    icon: Image.asset('assets/images/Group 912.png'),
+                    onPressed: () {
+                      bottomNavController.setBottomBarIndex(2);
+                    },
+                  ),
+                  IconButton(
+                    icon: Image.asset('assets/images/Group 913.png'),
+                    onPressed: () {
+                      bottomNavController.setBottomBarIndex(3);
+                    },
+                  ),
+                ],
+              ),
             ),
-          ),
-        );
-      }),
+          );
+        },
+      ),
     );
   }
 }

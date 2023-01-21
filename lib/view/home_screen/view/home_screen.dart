@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mypcot_assignment/constants/const.dart';
+import 'package:mypcot_assignment/view/home_screen/widgets/calendar_list_view.dart';
 import 'package:mypcot_assignment/view/home_screen/widgets/first_stack_container.dart';
+import 'package:mypcot_assignment/view/home_screen/widgets/new_order_container.dart';
 import 'package:mypcot_assignment/view/home_screen/widgets/today_row.dart';
 import 'package:mypcot_assignment/view/home_screen/widgets/welcome_title_ui.dart';
 
@@ -38,14 +40,21 @@ class HomeScreen extends StatelessWidget {
       body: Padding(
         padding: kMainPadding,
         child: SafeArea(
-          child: ListView(
-            children: const [
-              WelcomeTitle(),
-              kHeight40,
-              FirstStackContainer(),
-              kHeight30,
-              TodayRow(),
-            ],
+          child: SingleChildScrollView(
+            physics: const ScrollPhysics(),
+            child: Column(
+              children: const [
+                WelcomeTitle(),
+                kHeight40,
+                FirstStackContainer(),
+                kHeight30,
+                TodayRow(),
+                kHeight30,
+                CalendarListView(),
+                kHeight10,
+                NewOrderContainer(),
+              ],
+            ),
           ),
         ),
       ),

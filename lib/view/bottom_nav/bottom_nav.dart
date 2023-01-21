@@ -45,30 +45,100 @@ class BottomNav extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  IconButton(
-                    icon: Image.asset('assets/images/Group 910.png'),
-                    onPressed: () {
-                      bottomNavController.setBottomBarIndex(0);
-                    },
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Column(
+                      children: [
+                        kHeight10,
+                        InkWell(
+                          onTap: () {
+                            bottomNavController.setBottomBarIndex(0);
+                          },
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              color: Colors.transparent,
+                            ),
+                            child: const Image(
+                              image: AssetImage(home),
+                            ),
+                          ),
+                        ),
+                        const Text(
+                          'Home',
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
                   ),
-                  IconButton(
-                    icon: Image.asset('assets/images/Group 911.png'),
-                    onPressed: () {
-                      bottomNavController.setBottomBarIndex(1);
-                    },
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Column(
+                      children: [
+                        kHeight10,
+                        InkWell(
+                          onTap: () {
+                            bottomNavController.setBottomBarIndex(1);
+                          },
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              color: Colors.transparent,
+                            ),
+                            child: const Image(
+                              image: AssetImage(customers),
+                            ),
+                          ),
+                        ),
+                        const Text(
+                          'Customers',
+                          style: bottomStyle,
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox.shrink(),
-                  IconButton(
-                    icon: Image.asset('assets/images/Group 912.png'),
-                    onPressed: () {
-                      bottomNavController.setBottomBarIndex(2);
-                    },
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Column(
+                      children: [
+                        kHeight10,
+                        InkWell(
+                          onTap: () {
+                            bottomNavController.setBottomBarIndex(2);
+                          },
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              color: Colors.transparent,
+                            ),
+                            child: const Image(
+                              image: AssetImage(khata),
+                            ),
+                          ),
+                        ),
+                        const Text('Khata', style: bottomStyle),
+                      ],
+                    ),
                   ),
-                  IconButton(
-                    icon: Image.asset('assets/images/Group 913.png'),
-                    onPressed: () {
-                      bottomNavController.setBottomBarIndex(3);
-                    },
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Column(
+                      children: [
+                        kHeight10,
+                        InkWell(
+                          onTap: () {
+                            bottomNavController.setBottomBarIndex(3);
+                          },
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              color: Colors.transparent,
+                            ),
+                            child: const Image(
+                              image: AssetImage(orders),
+                            ),
+                          ),
+                        ),
+                        const Text('Orders', style: bottomStyle),
+                      ],
+                    ),
                   ),
                 ],
               ),

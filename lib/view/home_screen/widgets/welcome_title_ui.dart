@@ -27,6 +27,7 @@ class WelcomeTitle extends StatelessWidget {
           radius: 30,
           backgroundImage: AssetImage('assets/images/Group 922.png'),
         ),
+        
       ],
     );
   }

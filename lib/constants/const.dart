@@ -16,6 +16,12 @@ const kHeight30 = SizedBox(height: 30);
 const kWidth10 = SizedBox(width: 10);
 const kWidth20 = SizedBox(width: 20);
 
+//Bottom nav icons
+const home = 'assets/images/Group 910.png';
+const customers = 'assets/images/Group 912.png';
+const khata = 'assets/images/Group 913.png';
+const orders = 'assets/images/Group 914.png';
+
 //Padding
 const kMainPadding = EdgeInsets.all(16.0);
 
@@ -32,3 +38,4 @@ const subtitle = TextStyle(
     fontWeight: FontWeight.w300);
 const normalText = TextStyle(color: kWhiteColor, fontFamily: 'Roboto');
 const normalTextBlack = TextStyle(color: kBlackColor, fontFamily: 'Roboto');
+const bottomStyle = TextStyle(fontWeight: FontWeight.w400);

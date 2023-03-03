@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:mypcot_assignment/constants/const.dart';
 import 'package:mypcot_assignment/view/bottom_nav/bottom_nav.dart';
 
